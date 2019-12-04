@@ -1,0 +1,54 @@
+@import 'helpers/normalize';
+@import 'helpers/mixins';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    @include font-size(16px);
+    color: #ffffff;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    @include background(#000000);
+}
+
+#root {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 1040px;
+    height: 100%;
+}
+
+img {
+    object-fit: cover;
+    max-width: 100%;
+    display: block;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+    @include transition(opacity 0.2s linear);
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+    @include transition(visibility 0s 0.1s, opacity 0.1s linear);
+}
+
+.font-extra-bold {
+    font-weight: 800;
+}
+
+.font-light {
+    font-weight: 300;
+}
