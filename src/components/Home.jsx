@@ -14,15 +14,14 @@ const getDate = () => {
 const Home = ({ paginationTotal, paginationCount, paginationOffset, paginationAction }) => {
     const today = getDate();
 
-    GIPHY.getTrending(50, 0, (data) => {
+    GIPHY.getTrending(6, 0, (data) => {
         paginationAction(data.pagination.total_count, data.pagination.count, data.pagination.offset, data.data);
     });
 
     return (
         <div className='container'>
             <h1 className='font-extra-bold'>
-                Today
-                <span className='font-light'>{today ? today : 'Loading...'}</span>
+                Today <span className='font-light'>{today ? today : 'Loading...'}</span>
             </h1>
 
             <p>Trending</p>

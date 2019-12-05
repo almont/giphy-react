@@ -11,12 +11,20 @@ const Grid = ({ paginationData, paginationAction }) => {
             {paginationData &&
                 paginationData.map((data) => {
                     return (
-                        <div className='card'>
-                            <img src={`https://i.giphy.com/media/${data.id}/giphy.gif`} alt='' title='' />
-                            <p className='font-extra-bold'>{data.title}</p>
-                            <a href={data.url} target='_blank'>
-                                SEE
-                            </a>
+                        <div className='card' key={data.id}>
+                            <div className='card-content'>
+                                {/* <img src={`https://i.giphy.com/media/${data.id}/giphy.gif`} alt='' title='' /> */}
+                                <img src='https://i.giphy.com/media/RLWwOuPbqObupogOLB/giphy.gif' alt='' title='' />
+                                <p className='font-extra-bold'>{data.title}</p>
+                                <a href={data.url} target='_blank'>
+                                    SEE
+                                </a>
+                            </div>
+                            <dir>
+                                <span className='card-border-1'></span>
+                                <span className='card-border-2'></span>
+                                <span className='card-border-3'></span>
+                            </dir>
                         </div>
                     );
                 })}

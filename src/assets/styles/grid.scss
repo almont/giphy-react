@@ -1,35 +1,75 @@
 @import 'helpers/mixins';
 
+$color-1: #6157fc;
+$color-2: #fe6465;
+$color-3: #443dac;
+$color-4: #02d27e;
+$color-5: #e346b4;
+$color-6: #05ccfd;
+
+@function randomColor() {
+    $colors: ($color-1, $color-2, $color-3, $color-4, $color-5, $color-6);
+
+    @return '$color-' + random(length($colors));
+}
+
+$color-random: randomColor();
+
 .grid {
     margin: 10px 0;
-    // border: 2px solid blue;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 10px;
-    row-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 50px;
+
+    background-color: $color-random;
 }
 
 .card {
-    border: 2px solid #6157fc;
-    padding: 10px;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    p {
-        margin: 10px 0 0 0;
+    .card-content {
+        width: 100%;
+        // padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        p {
+            margin: 10px 0 0 0;
+        }
+
+        a {
+            margin: 10px 0;
+            @include font-size(12px);
+            color: #ffffff;
+            text-decoration: none;
+        }
+        a:visited {
+            color: #ffffff;
+        }
+        a:hover {
+            color: #0badd7;
+        }
     }
 
-    a {
-        @include font-size(12px);
-        color: #ffffff;
-        text-decoration: none;
+    .card-border-1 {
+        display: block;
+        height: 10px;
+        @include background(rgba($color-1, 0.8));
     }
-    a:visited {
-        color: #ffffff;
+
+    .card-border-2 {
+        display: block;
+        height: 10px;
+        @include background(rgba($color-1, 0.5));
     }
-    a:hover {
-        color: #0badd7;
+
+    .card-border-3 {
+        display: block;
+        height: 10px;
+        @include background(rgba($color-1, 0.3));
     }
 }
