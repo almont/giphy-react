@@ -1,6 +1,6 @@
 import React from 'react';
-import '../assets/styles/nav.scss';
-import Logo from '../assets/images/logo.gif';
+import '../../assets/styles/nav.scss';
+import Logo from '../../assets/images/logo.gif';
 
 const Nav = () => (
     <nav>

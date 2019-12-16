@@ -1,14 +1,13 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-// import Template from './Template';
-import Nav from './Nav';
-import Home from './Home';
+import Header from './header/Header';
+import Main from './main/Main';
 
 const App = () => (
     <Provider store={store}>
-        <Nav />
-        <Home />
+        <Header />
+        <Main />
     </Provider>
 );
 
