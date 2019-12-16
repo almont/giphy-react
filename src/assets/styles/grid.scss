@@ -1,12 +1,5 @@
 @import 'helpers/mixins';
 
-$color-1: #6157fc;
-$color-2: #fe6465;
-$color-3: #443dac;
-$color-4: #02d27e;
-$color-5: #e346b4;
-$color-6: #05ccfd;
-
 $colors-list: (#6157fc, #fe6465, #443dac, #02d27e, #e346b4, #05ccfd);
 
 @function randomColor() {

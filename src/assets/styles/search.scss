@@ -1,8 +1,24 @@
-// https://giphy.com/static/img/search-icon.svg
+@import 'helpers/mixins';
 
-input {
+.search {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-field {
+    margin: 0 10px 0 0;
+    padding: 10px;
+    flex-grow: 1;
+    @include font-size(14px);
+    color: #443dac;
+}
+
+.search-field:focus {
+    outline: none !important;
+    border-color: #e346b4;
 }
 
 .search-button {
+    padding: 5px 10px;
     background: linear-gradient(45deg, rgb(153, 51, 255) 0%, rgb(255, 102, 102) 100%);
 }

@@ -19,7 +19,7 @@ const Main = () => {
 
             <p className='trending'>Trending</p>
 
-            {/* <Grid /> */}
+            <Grid />
         </main>
     );
 };
