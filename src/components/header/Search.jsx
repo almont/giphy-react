@@ -21,10 +21,10 @@ const Search = ({ paginationData, paginationAction }) => {
     };
 
     return (
-        <div className='search'>
-            <input type='text' className='search-field' placeholder='Search' />
-            <button className='search-button' onClick={searchGIPHY}>
-                <img src='https://giphy.com/static/img/search-icon.svg' alt='SEARCH' />
+        <div className="search">
+            <input type="text" className="search-field" placeholder="Search" />
+            <button className="search-button" onClick={searchGIPHY}>
+                <img src="https://giphy.com/static/img/search-icon.svg" alt="SEARCH" />
             </button>
         </div>
     );
